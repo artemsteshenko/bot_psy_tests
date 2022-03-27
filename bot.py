@@ -150,8 +150,9 @@ def one(update: Update, context: CallbackContext) -> int:
     query.answer()
     print(query)
     keyboard = [
+        [InlineKeyboardButton("Полностью согласен", callback_data=str(FULLY_AGREE))],
         [
-            InlineKeyboardButton("Полностью согласен", callback_data=str(FULLY_AGREE)),
+
             InlineKeyboardButton("Согласен", callback_data=str(AGREE)),
             InlineKeyboardButton("Не согласен", callback_data=str(DISAGREE)),
         ]
